@@ -1,25 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
+import Profile from './Components/Profile';
+import Bio from './Components/Bio';
+import TechnicalSkills from './Components/TechnicalSkils';
+import PersonalSkills from './Components/PersonalSkills';
+import Footer from './Components/Footer';
+import {useEffect} from 'react';
+import {FiArrowUpCircle} from 'react-icons/fi';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const top = () => {
+        window.scrollTo(0, 0);
+    };
+
+    return (
+        <div className="App">
+            <Profile />
+            <div className="container mt-5 ">
+                <div className="mb-5">
+                    <Bio />
+                </div>
+                <div className="mb-5">
+                    <TechnicalSkills />
+                </div>
+                <div className="mb-5">
+                    <PersonalSkills />
+                </div>
+                <div className="nav ">
+                    <FiArrowUpCircle
+                        onClick={() => top()}
+                        style={{
+                            fontSize: '50px',
+                            paddingTop: '3px',
+                            color: 'white'
+                        }}
+                    />
+                </div>
+                <div className="mb-5">
+                    <Footer />
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default App;
