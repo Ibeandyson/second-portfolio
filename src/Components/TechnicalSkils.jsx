@@ -13,7 +13,7 @@ let data = {
         'Nodejs',
         'Express',
         'MongoDB',
-        'Fibase',
+        'Firebase',
         'Git',
         ''
     ],

@@ -7,30 +7,24 @@ import Button from '@material-ui/core/Button';
 import {MdKeyboardArrowLeft, MdKeyboardArrowRight} from 'react-icons/md';
 import SwipeableViews from 'react-swipeable-views';
 import {autoPlay} from 'react-swipeable-views-utils';
-
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+import nextland from '../images/nextland.png';
+import bellefuapp from '../images/bellefuapp.png';
+import bellefuweb from '../images/bellefuweb.png';
 
 const tutorialSteps = [
     {
-        label: 'coming soon this is just a place holder',
-        imgPath: 'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60'
+        label: 'NextLand a web app for real estate',
+        imgPath: `${nextland}`
     },
     {
-        label: 'coming soon this is just a place holder',
-        imgPath: 'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60'
+        label: 'Bellefu Mobile App for agro-digital connect',
+        imgPath: `${bellefuapp}`
     },
     {
-        label: 'coming soon this is just a place holder',
-        imgPath: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80'
+        label: 'Bellefu Web App for agro-digital connect',
+        imgPath: `${bellefuweb}`
     },
-    {
-        label: 'coming soon this is just a place holder',
-        imgPath: 'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=400&h=250&q=60'
-    },
-    {
-        label:'coming soon this is just a place holder',
-        imgPath: 'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60'
-    }
+  
 ];
 
 const useStyles = makeStyles(theme => ({
@@ -68,9 +62,6 @@ export default function Bio() {
         setActiveStep(prevActiveStep => prevActiveStep - 1);
     };
 
-    const handleStepChange = step => {
-        setActiveStep(step);
-    };
 
     return (
         <div>
@@ -174,8 +165,8 @@ export default function Bio() {
                                 <hr />
                                 <p style={{color: 'black', fontWeight: 'bold', fontSize: '0.9em'}}>Freelancing</p>
                                 <p style={{color: 'black', fontWeight: 'bold', opacity: '0.6', fontSize: '0.7em'}}>
-                                    so far so good i have been Freelancing for a year. people contact me for jobs and i
-                                    always get the job done as expected.
+                                    So far so good i have been Freelancing for over 3years now. people contact me for
+                                    jobs and i always get the job done as expected.
                                 </p>
 
                                 <p style={{color: 'black', fontWeight: 'bold', fontSize: '0.9em'}}>
@@ -185,7 +176,7 @@ export default function Bio() {
                                     Valid Profits
                                 </p>
                                 <p style={{color: 'black', fontWeight: 'bold', opacity: '0.6', fontSize: '0.7em'}}>
-                                    Contract Since 15TH January - Present
+                                    Contract Since 15TH January 2020 - Present
                                 </p>
 
                                 <p style={{color: 'black', fontWeight: 'bold', fontSize: '0.9em'}}>
@@ -195,7 +186,7 @@ export default function Bio() {
                                     Bellefu Agro-digital
                                 </p>
                                 <p style={{color: 'black', fontWeight: 'bold', opacity: '0.6', fontSize: '0.7em'}}>
-                                    Contract Since 28th June - Present
+                                    Contract Since 28th June 2020 - Present
                                 </p>
                             </div>
                         </div>
@@ -218,53 +209,49 @@ export default function Bio() {
                                 </button>
                             </div>
                             <div class="modal-body">
-                                    <Paper square elevation={0} className={classes.header}>
-                                        <Typography>{tutorialSteps[activeStep].label}</Typography>
-                                    </Paper>
-                                    <AutoPlaySwipeableViews
-                                        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-                                        index={activeStep}
-                                        onChangeIndex={handleStepChange}
-                                        enableMouseEvents>
-                                        {tutorialSteps.map((step, index) => (
-                                            <div key={step.label}>
-                                                {Math.abs(activeStep - index) <= 2 ? (
-                                                    <img className={classes.img} src={step.imgPath} alt={step.label} />
-                                                ) : null}
-                                            </div>
-                                        ))}
-                                    </AutoPlaySwipeableViews>
-                                    <MobileStepper
-                                        steps={maxSteps}
-                                        position="static"
-                                        variant="text"
-                                        activeStep={activeStep}
-                                        nextButton={
-                                            <Button
-                                                size="small"
-                                                style={{backgroundColor: "#008037", color: "white", }}
-                                                onClick={handleNext}
-                                                disabled={activeStep === maxSteps - 1}>
-                                                Next
-                                                {theme.direction === 'rtl' ? (
-                                                    <MdKeyboardArrowLeft />
-                                                ) : (
-                                                    <MdKeyboardArrowRight />
-                                                )}
-                                            </Button>
-                                        }
-                                        backButton={
-                                            <Button size="small" style={{backgroundColor: "#008037", color: "white",}} onClick={handleBack} disabled={activeStep === 0}>
-                                                {theme.direction === 'rtl' ? (
-                                                    <MdKeyboardArrowRight />
-                                                ) : (
-                                                    <MdKeyboardArrowLeft />
-                                                )}
-                                                Back
-                                            </Button>
-                                        }
-                                    />
-                                
+                                <Paper square elevation={0} className={classes.header}>
+                                    <Typography>{tutorialSteps[activeStep].label}</Typography>
+                                </Paper>
+                                <img
+                                    className={classes.img}
+                                    src={tutorialSteps[activeStep].imgPath}
+                                    alt={tutorialSteps[activeStep].label}
+                                />
+                                <MobileStepper
+                                    steps={maxSteps}
+                                    position="static"
+                                    variant="text"
+                                    activeStep={activeStep}
+                                    nextButton={
+                                        <Button
+                                            size="small"
+                                            onClick={handleNext}
+                                            style={{backgroundColor: '#008037', color: 'white'}}
+                                            disabled={activeStep === maxSteps - 1}>
+                                            Next
+                                            {theme.direction === 'rtl' ? (
+                                                <MdKeyboardArrowLeft />
+                                            ) : (
+                                                <MdKeyboardArrowRight />
+                                            )}
+                                        </Button>
+                                    }
+                                    backButton={
+                                        <Button
+                                            size="small"
+                                            style={{backgroundColor: '#008037', color: 'white'}}
+                                            onClick={handleBack}
+                                            disabled={activeStep === 0}>
+                                            {theme.direction === 'rtl' ? (
+                                                <MdKeyboardArrowRight />
+                                            ) : (
+                                                <MdKeyboardArrowLeft />
+                                            )}
+                                            Back
+                                        </Button>
+                                    }
+                                />
+
                             </div>
                         </div>
                     </div>
