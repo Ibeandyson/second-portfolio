@@ -5,8 +5,6 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import {MdKeyboardArrowLeft, MdKeyboardArrowRight} from 'react-icons/md';
-import SwipeableViews from 'react-swipeable-views';
-import {autoPlay} from 'react-swipeable-views-utils';
 import nextland from '../images/nextland.png';
 import bellefuapp from '../images/bellefuapp.png';
 import bellefuweb from '../images/bellefuweb.png';
@@ -23,8 +21,7 @@ const tutorialSteps = [
     {
         label: 'Bellefu Web App for agro-digital connect',
         imgPath: `${bellefuweb}`
-    },
-  
+    }
 ];
 
 const useStyles = makeStyles(theme => ({
@@ -62,11 +59,10 @@ export default function Bio() {
         setActiveStep(prevActiveStep => prevActiveStep - 1);
     };
 
-
     return (
         <div>
-            <h1 style={{fontWeight: 'bolder', color: '#008037'}}>ABOUT</h1>
             <div className="mt-3">
+                <h5 style={{fontWeight: 'bolder', color: '#008037'}}> Hello! I'm Ibe Andyson Andrew </h5>
                 <p
                     style={{
                         color: 'black',
@@ -75,11 +71,12 @@ export default function Bio() {
                         opacity: '0.7',
                         lineHeight: '2.2em'
                     }}>
-                    Hello! I'm Ibe Andyson Andrew, a passionate Front-end web and mobile app developer, dedicated to
-                    build a nice and friendly user interface. I have experience on UX Design which made me able to build
-                    a friendly user interface. Also I have experience on server-side rendering, Back-end development. I
-                    build highly scalbe user interface with React.js, and cross platform mobile application with React
-                    Native.
+                    a passionate experienced Front-End (Web and Mobile) Software Developer, with a domonstrated history
+                    of works, with strong client communication relationship dedicated to build nice and friendly user
+                    interface. I have experience on UX Design which makes me able to build friendly user interface that
+                    everyone love and love to spend time more on. Also I have experience on server-side rendering,
+                    Back-end development. I build  highly scalable user interface with React.js, and cross platform mobile
+                    application with React Native. I am known for good coding practice, neat code , clean code, readable / reuseable codes.
                 </p>
                 <p
                     style={{
@@ -89,23 +86,41 @@ export default function Bio() {
                         opacity: '0.7',
                         lineHeight: '2.2em'
                     }}>
-                    I'm a Software Developer with over 2 year of experience in working on Real life projects other then
-                    learning, and doing my personal projects for learing purpose. I have done projects on MERN stack
-                    (MongoDB, Express.js, React.js, Node.js). I have work with teams on lot's of projects at my school
-                    and in my local developers community. I also have skill in computer repair / maintemamce and basic
+                    I'm a Software Developer with over 3 year of experience in working on Real life projects and
+                    learning, I have done projects on MERN stack (MongoDB, Express.js, React.js, Node.js). I have work
+                    with teams on lot's of projects. I also have skill in computer repair / maintemamce and basic
                     Networking which I was practicing before I learnt coding. I studied Computer Science at The Federal
                     Polytechnic Nekede Owerri Imo State.
                 </p>
-                <button
-                    type="button"
-                    class="btn btn-success btn-sm mr-5"
-                    data-toggle="modal"
-                    data-target="#exampleModal">
-                    Know More
-                </button>
-                <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#exampleModal1">
-                    Portfolio
-                </button>
+
+                <p
+                    style={{
+                        color: 'black',
+                        textAlign: 'justify',
+                        fontWeight: 'bold',
+                        opacity: '0.7',
+                        lineHeight: '2.2em'
+                    }}>
+                    I am open for better opportunity, so feel much free to reach out to me for what i do best. I always
+                    put smile to people's face with my end product, I belive in growth, I welcome corrections in any
+                    form at all
+                </p>
+                <div className="text-center pt-5 pb-5">
+                    <button
+                        type="button"
+                        class="btn btn-success btn-sm mr-5"
+                        data-toggle="modal"
+                        data-target="#exampleModal">
+                        Know More
+                    </button>
+                    <button
+                        type="button"
+                        class="btn btn-success btn-sm"
+                        data-toggle="modal"
+                        data-target="#exampleModal1">
+                        Portfolio
+                    </button>
+                </div>
 
                 {/* ========MODAL FOR KNOW MORE =============== */}
                 <div
@@ -251,7 +266,6 @@ export default function Bio() {
                                         </Button>
                                     }
                                 />
-
                             </div>
                         </div>
                     </div>

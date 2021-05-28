@@ -11,3 +11,9 @@ html {
    width: 50px;
 
   }
+  .App{
+    max-width: 1000px;
+    margin: auto;
+    background-image: url("data:images/bg.svg");
+    background-repeat: no-repeat;
+  }

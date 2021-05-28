@@ -14,7 +14,10 @@ function App() {
 
     return (
         <div className="App">
+           
             <Profile />
+           
+            
             <div className="container mt-5 ">
                 <div className="mb-5">
                     <Bio />

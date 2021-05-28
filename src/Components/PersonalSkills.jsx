@@ -3,7 +3,7 @@ import React from 'react';
 export default function PersonalSkills() {
     return (
         <div>
-            <h1 style={{fontWeight: 'bolder', color: '#008037'}}>Personal Skills</h1>
+            <h5 className="text-center" style={{fontWeight: 'bolder', color: '#008037'}}>Personal Skills</h5>
             <div classsName="mt-3">
             <p style={{color: 'black',  textAlign: "justify", fontWeight: 'bold', opacity: '0.7', }} className="mt-3">TEAM WORK</p>
                 <div class="progress">

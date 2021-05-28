@@ -44,7 +44,7 @@ let data = {
 export default function TechnicalSkils() {
     return (
         <div>
-            <h1 style={{fontWeight: 'bolder', color: '#008037'}}>Technical Skills</h1>
+            <h5 className="text-center" style={{fontWeight: 'bolder', color: '#008037'}}>Technical Skills</h5>
             <div className="card d-none d-md-block d-lg-block">
                 <div className="card-body ">
                     <Bar data={data} width={100} height={500} options={{maintainAspectRatio: false}} />
